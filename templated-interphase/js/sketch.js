@@ -35,6 +35,10 @@ function setup() {
 function draw() {
     background(255); // Sets background color
 
+
+    rect(0, 0, windowWidth, height);
+
+    
     // Maps out how far everyone needs to be to abide by social 
     // distancing standards
 
@@ -50,6 +54,7 @@ function draw() {
     text(round(windowWidth * (1 / scaleInchToPixel)) + "ft", windowWidth / 2, height - 20);
     text(round(height * (1 / scaleInchToPixel)) + "ft", 20, height / 2);
 
+    
 }
 
 function mouseDragged() {
