@@ -5,169 +5,236 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Interphase by TEMPLATED</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body class="landing">
 
-		<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Interphase</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
+<head>
+	<meta charset="UTF-8">
+	<title>Pandemic Planner </title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript>
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+
+<body class="landing">
+
+	<!-- Header -->
+	<!-- this section is the top tool bar-->
+	<header id="header">
+		<h1><a href="index.html">Pandemic Planner</a></h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">Event Tools</a></li>
+				<li><a href="elements.html">Elements</a></li>
+			</ul>
+		</nav>
+
+
+	</header>
+
+	<!-- Banner -->
+	<!-- First page-->
+	<section id="banner">
+		<h2>Pandemic Planner</h2>
+		<p style="font-family:arial,gadget,sans-serif;font-size:20px;font-style:italic;">
+			Event planning for COVID-19
+		</p>
+		<ul class="actions">
+			<a href="#" class="button big">Call 911 For Medical Emergencies</a>
+
+		</ul>
+	</section>
+
+
+
+
+
+	<!-- One -->
+	<section id="one" class="wrapper style1 align-left">
+		<div class="container">
+			<header>
+				<h2>Social-Distance Check</h2>
+				<p>Enter in the number of people and the dimensions of the venue to see if this event is COVID-19
+					friendly :)</p>
 			</header>
+			<form>
+				<label for="fname">Number of People: </label>
+				<input type="number" id="people" name="people" min="0"><br><br>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h2>This is Interphase</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<label for="lname">Length x Width (inches):</label>
+				<input type="number" id="Length" name="length" min="0">
+				<input type="number" id="Width" name="Width" min="0"> <br><br>
+
+				<input type="submit" value="Generate">
+
+
+			</form>
+			<!--
+			<div class="row 200%">
+				<section class="4u 12u$(small)">
+					<i class="icon big rounded fa-clock-o"></i>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quam consectetur quibusdam magni
+						minus aut modi aliquid.</p>
+				</section>
+				<section class="4u 12u$(small)">
+					<i class="icon big rounded fa-comments"></i>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam consequatur repellat
+						debitis maxime molestiae.</p>
+				</section>
+				<section class="4u$ 12u$(small)">
+					<i class="icon big rounded fa-user"></i>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque eveniet, nesciunt
+						molestias. Ipsam, voluptate vero.</p>
+				</section>
+			</div>
+			//-->
+		</div>
+	</section>
+
+	<!-- Canvas -->
+	<div id="drawingCanvas">
+
+	</div>
+	<!-- Two -->
+	<section id="two" class="wrapper style2 align-center">
+		<div class="container">
+			<header>
+				<h2>Lorem ipsum dolor sit</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, autem.</p>
+			</header>
+			<div class="row">
+				<section class="feature 6u 12u$(small)">
+					<img class="image fit" src="images/pic01.jpg" alt="" />
+					<h3 class="title">Lorem ipsum dolor</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam.
+						Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur
+						adipisicing elit.</p>
+				</section>
+				<section class="feature 6u$ 12u$(small)">
+					<img class="image fit" src="images/pic02.jpg" alt="" />
+					<h3 class="title">Esse, fugiat, in</h3>
+					<p>Natus perspiciatis fugit illum porro iusto fuga nam voluptas minima voluptates deserunt, veniam
+						reiciendis harum repellat necessitatibus. Animi, adipisci qui. Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit.</p>
+				</section>
+				<section class="feature 6u 12u$(small)">
+					<img class="image fit" src="images/pic03.jpg" alt="" />
+					<h3 class="title">Voluptates, repudiandae, dolor</h3>
+					<p>Voluptatibus repellendus tempora, quia! Consequuntur atque, rerum quis, ullam labore officiis
+						ipsa beatae dolore, assumenda eos harum repudiandae, qui ab! Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit.</p>
+				</section>
+				<section class="feature 6u$ 12u$(small)">
+					<img class="image fit" src="images/pic04.jpg" alt="" />
+					<h3 class="title">Eveniet, reiciendis, veniam</h3>
+					<p>Rem nulla molestiae inventore quibusdam repudiandae doloremque eveniet ullam, qui autem possimus
+						saepe laudantium numquam sapiente vel. Repudiandae, nihil tempore. Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit.</p>
+				</section>
+			</div>
+			<footer>
 				<ul class="actions">
 					<li>
-						<a href="#" class="button big">Learn More</a>
+						<a href="#" class="button alt big">Learn More</a>
 					</li>
 				</ul>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style1 align-center">
-				<div class="container">
-					<header>
-						<h2>Consectetur adipisicing elit</h2>
-						<p>Lorem ipsum dolor sit amet adipisicing elit. Delectus consequatur sed tempus.</p>
-					</header>
-					<div class="row 200%">
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-clock-o"></i>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quam consectetur quibusdam magni minus aut modi aliquid.</p>
-						</section>
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-comments"></i>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam consequatur repellat debitis maxime molestiae.</p>
-						</section>
-						<section class="4u$ 12u$(small)">
-							<i class="icon big rounded fa-user"></i>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque eveniet, nesciunt molestias. Ipsam, voluptate vero.</p>
-						</section>
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style2 align-center">
-				<div class="container">
-					<header>
-						<h2>Lorem ipsum dolor sit</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, autem.</p>
-					</header>
-					<div class="row">
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="images/pic01.jpg" alt="" />
-							<h3 class="title">Lorem ipsum dolor</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="images/pic02.jpg" alt="" />
-							<h3 class="title">Esse, fugiat, in</h3>
-							<p>Natus perspiciatis fugit illum porro iusto fuga nam voluptas minima voluptates deserunt, veniam reiciendis harum repellat necessitatibus. Animi, adipisci qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="images/pic03.jpg" alt="" />
-							<h3 class="title">Voluptates, repudiandae, dolor</h3>
-							<p>Voluptatibus repellendus tempora, quia! Consequuntur atque, rerum quis, ullam labore officiis ipsa beatae dolore, assumenda eos harum repudiandae, qui ab! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="images/pic04.jpg" alt="" />
-							<h3 class="title">Eveniet, reiciendis, veniam</h3>
-							<p>Rem nulla molestiae inventore quibusdam repudiandae doloremque eveniet ullam, qui autem possimus saepe laudantium numquam sapiente vel. Repudiandae, nihil tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-					</div>
-					<footer>
-						<ul class="actions">
-							<li>
-								<a href="#" class="button alt big">Learn More</a>
-							</li>
-						</ul>
-					</footer>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<section class="4u 6u(medium) 12u$(small)">
-							<h3>Lorem ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque!</p>
-							<ul class="alt">
-								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-								<li><a href="#">Quod adipisci perferendis et itaque.</a></li>
-								<li><a href="#">Itaque eveniet ullam, veritatis reiciendis?</a></li>
-								<li><a href="#">Accusantium repellat accusamus a, soluta.</a></li>
-							</ul>
-						</section>
-						<section class="4u 6u$(medium) 12u$(small)">
-							<h3>Nostrum, repellat!</h3>
-							<p>Tenetur voluptate exercitationem eius tempora! Obcaecati suscipit, soluta earum blanditiis.</p>
-							<ul class="alt">
-								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-								<li><a href="#">Id inventore, qui necessitatibus sunt.</a></li>
-								<li><a href="#">Deleniti eum odit nostrum eveniet.</a></li>
-								<li><a href="#">Illum consectetur quibusdam eos corporis.</a></li>
-							</ul>
-						</section>
-						<section class="4u$ 12u$(medium) 12u$(small)">
-							<h3>Contact Us</h3>
-							<ul class="icons">
-								<li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
-								<li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="tabular">
-								<li>
-									<h3>Address</h3>
-									1234 Somewhere Road<br>
-									Nashville, TN 00000
-								</li>
-								<li>
-									<h3>Mail</h3>
-									<a href="#">someone@untitled.tld</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									(000) 000-0000
-								</li>
-							</ul>
-						</section>
-					</div>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-					</ul>
-				</div>
 			</footer>
+		</div>
+	</section>
 
-	</body>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<section class="4u 6u$(medium) 12u$(small)">
+					<h3>Charities</h3>
+					<p>Please consider donating to the following charities focused on COVID-19 Relief</p>
+					<ul class="alt">
+						<li><a href="https://www.globalgiving.org/projects/coronavirus-relief-fund/?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FW8svgErfU9x2xUueS-jm-ZduOn0l_xeTeZ2SgqGeyooYmbZro-99kaAvkpEALw_wcB">GlobalGiving</a></li>
+						<li><a href="https://www.actionagainsthunger.org/story/fighting-covid-19-around-world?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FU-sojAYVrvB40WJj458NbFiUAb8o3j8ETu3yjLRxTizZNtJGDP04caAiD9EALw_wcB".org/>Actions Against Hunger</a></li>
+						<li><a
+								href="https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=7779">Green
+								America</a></li>
+						<li><a href="https://org2.salsalabs.com/o/7315/donate_page/now">Popular Resistance</a></li>
+					</ul>
+				</section>
+				<section class="4u 6u$(medium) 12u$(small)">
+					<h3>COVID-19 Resources</h3>
+					<li>
+						<a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC COVID-19 Site</a><br>
+						
+					</li>
+					<li>
+						<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO COVID-19 Site</a><br>
+						
+					</li>
+
+
+
+					</ul>
+				</section>
+				<section class="4u$ 12u$(medium) 12u$(small)">
+					<h3>Reach Out to Us!</h3>
+
+					<ul class="tabular">
+						<h2>
+							Jacob Zietek
+
+						</h2>
+
+
+						<li>
+							<h3>Mail:</h3>
+							<a href="mailto:xoqcpn@gmail.com">xoqcpn@gmail.com</a>
+						</li>
+						<li>
+							<h3>Phone</h3>
+							(631)-983-7322
+						</li>
+						<li>
+							<h3>LinkedIn: </h3>
+							<a
+								href="https://www.linkedin.com/in/jacob-zietek-4a7b5b190">linkedin.com/in/jacob-zietek</a>
+						</li>
+						<br><br>
+						<h2>
+							Justin Chan
+						</h2>
+
+						<li>
+							<h3>Mail:</h3>
+							<a href="mailto:justinchanchan8@gmail.com">justinchanchan8@gmail.com</a>
+						</li>
+						<li>
+							<h3>Phone:</h3>
+							(917)-704-8031
+						</li>
+						<li>
+							<h3>LinkedIn: </h3>
+							<a
+								href="https://www.linkedin.com/in/jacob-zietek-4a7b5b190">linkedin.com/in/jacob-zietek</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<ul class="copyright">
+				<li>&copy; All rights reserved.</li>
+				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+				<li>Images: <a href="http://unsplash.com">Unsplash</a> and Stranger Things Season 3</li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+
 </html>
