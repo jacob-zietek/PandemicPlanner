@@ -7,8 +7,14 @@
 <html lang="en">
 
 <script src="js/p5.min.js"></script>
-<script src="js/main.js"></script>
 <script src="js/sketch.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+	window.onload = function () {
+		document.getElementById('drawingCanvas').style.display='none';
+	}
+</script>
 
 <head>
 	<meta charset="UTF-8">
@@ -86,14 +92,12 @@
 				<input type="number" id="people" name="people" min="0"><br><br>
 
 				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px";>Length x Width (feet):</label>
-				<input type="number" id="Length" name="length" min="0">
-				<input type="number" id="Width" name="Width" min="0"> <br><br>
-
-				<input type="submit" value="Generate" background-color = "#c26565" > <!-- generates something button wrong color-->
-
+				<input type="number" id="length" name="length" min="0">
+				<input type="number" id="width" name="width" min="0"> <br><br>
 			
 			</form>
-	
+			<input type="submit" value="Generate" background-color = "#c26565" onclick="genSocialDistance();"> <!-- generates something button wrong color-->
+
 			<!--
 			<div class="row 200%">
 				<section class="4u 12u$(small)">
@@ -117,7 +121,7 @@
 	</section>
 
 	<!-- Canvas -->
-	<div id="drawingCanvas">
+	<div id="drawingCanvas" >
 
 	</div>
 	<!-- Two -->
