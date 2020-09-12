@@ -1,0 +1,204 @@
+{
+    "states" : [
+        {
+            "id" : "AL",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "AK",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "AZ",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "AR",
+            "maxParticipants" : "100"
+        },
+        {
+            "id" : "CA",
+            "maxParticipants" : "0"
+        },
+        {
+            "id" : "CO",
+            "maxParticipants" : "100"
+        },
+        {
+            "id" : "CT",
+            "maxParticipants" : "25"
+        },
+        {
+            "id" : "DE",
+            "maxParticipants" : "60% max capacity"
+        },
+        {
+            "id" : "FL",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "GA",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "HI",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "ID",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "IL",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "IN",
+            "maxParticipants" : "250"
+        },
+        {
+            "id" : "IA",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "KS",
+            "maxParticipants" : "45"
+        },
+        {
+            "id" : "KY",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "LA",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "ME",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "MD",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "MA",
+            "maxParticipants" : "25"
+        },
+        {
+            "id" : "MI",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "MN",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "MS",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "MO",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "MT",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "NE",
+            "maxParticipants" : "10,000"
+        },
+        {
+            "id" : "NV",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "NH",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "NJ",
+            "maxParticipants" : "25% max capacity or 25"
+        },
+        {
+            "id" : "NM",
+            "maxParticipants" : "5"
+        },
+        {
+            "id" : "NY",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "NC",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "ND",
+            "maxParticipants" : "500"
+        },
+        {
+            "id" : "OH",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "OK",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "OR",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "PA",
+            "maxParticipants" : "25"
+        },
+        {
+            "id" : "RI",
+            "maxParticipants" : "15"
+        },
+        {
+            "id" : "SC",
+            "maxParticipants" : "250"
+        },
+        {
+            "id" : "SD",
+            "maxParticipants" : "none"
+        },
+        {
+            "id" : "TN",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "TX",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "UT",
+            "maxParticipants" : "50"
+        },
+        {
+            "id" : "VT",
+            "maxParticipants" : "75"
+        },
+        {
+            "id" : "VA",
+            "maxParticipants" : "250"
+        },
+        {
+            "id" : "WA",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "WV",
+            "maxParticipants" : "25"
+        },
+        {
+            "id" : "WI",
+            "maxParticipants" : "10"
+        },
+        {
+            "id" : "WY",
+            "maxParticipants" : "250"
+        }
+    ]
+}
