@@ -12,7 +12,7 @@
 
 <script>
 	window.onload = function () {
-		document.getElementById('drawingCanvas').style.display='none';
+		document.getElementById('drawingCanvas').style.display = 'none';
 	}
 </script>
 
@@ -58,17 +58,17 @@
 	<!-- Banner -->
 	<!-- First page-->
 	<section id="banner">
-		<h2 style = "font-family: Arial, Gadget, sans-serif;"> Pandemic Planner </h2>
+		<h2 style="font-family: Arial, Gadget, sans-serif;"> Pandemic Planner </h2>
 		<p style="font-family: Arial, Gadget, sans-serif;font-size:16px;font-style:italic;">
 			Event planner's bestfriend during COVID-19
 		</p>
 		<ul class="actions">
-			<a href="#" class="button big">Call 911 For Medical Emergencies</a>
+			<a href="tel: 911" class="button big">Call 911 For Medical Emergencies</a>
+			<!--<a href="tel:123-456-7890">123-456-7890</a> -->
 
 		</ul>
-			<img class="image.left" src="images/pic10.png" alt="" />
-			<h3 class="title">Lorem ipsum dolor</h3>
-			
+		<img class="image.left" src="images/pic10.png" alt="" />
+
 	</section>
 
 
@@ -81,22 +81,32 @@
 			<header>
 				<h2>Social Distance Generator</h2>
 				<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-				<p style = "font-family: Open Sans; 20px">Enter in the number of people and the dimensions of the venue to see if this event is COVID-19
+				<p style="font-family: Open Sans; 20px">Enter in the number of people and the dimensions of the venue to
+					see if this event is COVID-19
 					friendly :)</p>
 			</header>
-		
 
-			
+
+
 			<form>
-				<label for="fname" style="font-family: Arial, Gadget, sans-serif;font-size:20px"; >Number of People: </label>
+				<label for="fname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Number of People:
+				</label>
 				<input type="number" id="people" name="people" min="0"><br><br>
 
-				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px";>Length x Width (feet):</label>
+				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Length x Width
+					(feet):</label>
 				<input type="number" id="length" name="length" min="0">
 				<input type="number" id="width" name="width" min="0"> <br><br>
-			
+				<label for="location" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Venue
+					Location:</label>
+				<input type="text" id="location" name="location">
+
 			</form>
-			<input type="submit" value="Generate" background-color = "#c26565" onclick="genSocialDistance();"> <!-- generates something button wrong color-->
+
+			<input type="submit" value="Generate" style="background-color: #c26565; 
+			border-radius: 10px;
+			" onclick="genSocialDistance();">
+			<!-- generates something button wrong color-->
 
 			<!--
 			<div class="row 200%">
@@ -121,7 +131,7 @@
 	</section>
 
 	<!-- Canvas -->
-	<div id="drawingCanvas" >
+	<div id="drawingCanvas">
 
 	</div>
 	<!-- Two -->
@@ -131,17 +141,92 @@
 				<h2>Cost Breakdown</h2>
 				<p>This is a bare minimum cost of running an event with COVID-19 in mind</p>
 			</header>
-			<!--
+			<!DOCTYPE html>
+			<html>
+
+			<head>
+				<style>
+					table {
+						font-family: arial, sans-serif;
+						border-radius: 10px
+						width: 100%;
+						background-color: #68c2e9;
+
+					}
+
+					th {
+						border: 1px solid #258de2; 
+						text-align: left;
+						padding: 8px;
+
+
+					}
+
+					td {
+						border: 3px solid #258de2;
+						text-align: left;
+						padding: 8px;
+					}
+
+			
+				</style>
+			</head>
+
+			<body>
+				<table>
+					<tr>
+						<td style="font-size: 25px";>Item</td>
+						<td style="font-size: 25px";>Cost</td>
+					</tr>
+					<tr>
+
+						<td><a href="https://www.amazon.com/Luxton-Automatic-Hand-Sanitizer-Dispenser/dp/B088LWDTYB/ref=sr_1_2_sspa?crid=ZWOKRTD5PYJA&dchild=1&keywords=purell+dispenser&qid=1599929125&sprefix=purell+dispe%2Caps%2C323&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUjRMV1JBM0VEWDA3JmVuY3J5cHRlZElkPUEwMzAxMzExMTU0TUZTNjhMSU44MSZlbmNyeXB0ZWRBZElkPUEwNTM5MTIxRThORFdaSk4xUUpPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+								style="color:#000000;">Hand Sanitizer Dispenser</a><br></td>
+						<td>
+							<p id="handSanitizer">$320</p>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="https://thedentalmarket.net/featured-items/purell-advanced-hand-sanitizer-gel-1000-ml-refill/?gclid=CjwKCAjw4_H6BRALEiwAvgfzq3BtepkSbJHOw1uu9d4FS-P9A-19NoMTeX2XsGJh5Jjqm-KYq4F1CRoCS9kQAvD_BwE"
+								style="color:#000000;">Hand Sanitizer Refill</a><br></td>
+
+						<td>
+							<p id="handSanitizer">$20</p>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="https://www.amazon.com/Luxton-Automatic-Hand-Sanitizer-Dispenser/dp/B088LWDTYB/ref=sr_1_2_sspa?crid=ZWOKRTD5PYJA&dchild=1&keywords=purell+dispenser&qid=1599929125&sprefix=purell+dispe%2Caps%2C323&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUjRMV1JBM0VEWDA3JmVuY3J5cHRlZElkPUEwMzAxMzExMTU0TUZTNjhMSU44MSZlbmNyeXB0ZWRBZElkPUEwNTM5MTIxRThORFdaSk4xUUpPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+								style="color:#000000;">Deep Cleaning Cost</a><br></td>
+						<td>
+							<p id="DeepClean">$20</p>
+						</td>
+					</tr>
+					<tr>
+						<td style = "font-size: 25px;">Total Cost:         <div style = "display: inline"; id="DeepClean">$20</div></td>
+						
+							
+						
+					</tr>
+
+				</table>
+
+			</body>
+
+			</html>
+
+			
+
+				<!--
 
 				cost breakdown section
 			-->
-			<footer>
-				<ul class="actions">
-					<li>
-						<a href="#" class="button alt big">Learn More</a>
-					</li>
-				</ul>
-			</footer>
+				<footer>
+					<ul class="actions">
+						<li>
+							<a href="#" class="button alt big">Learn More</a>
+						</li>
+					</ul>
+				</footer>
 		</div>
 	</section>
 
@@ -153,21 +238,25 @@
 					<h3>Charities</h3>
 					<p>Please consider donating to the following charities focused on COVID-19 Relief</p>
 					<ul class="alt">
-						<li><a href="https://www.globalgiving.org/projects/coronavirus-relief-fund/?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FW8svgErfU9x2xUueS-jm-ZduOn0l_xeTeZ2SgqGeyooYmbZro-99kaAvkpEALw_wcB">GlobalGiving</a></li>
-						<li><a href="https://www.actionagainsthunger.org/story/fighting-covid-19-around-world?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FU-sojAYVrvB40WJj458NbFiUAb8o3j8ETu3yjLRxTizZNtJGDP04caAiD9EALw_wcB".org/>Actions Against Hunger</a></li>
 						<li><a
-								href="https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=7779">Charity Navigator</a></li>
+								href="https://www.globalgiving.org/projects/coronavirus-relief-fund/?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FW8svgErfU9x2xUueS-jm-ZduOn0l_xeTeZ2SgqGeyooYmbZro-99kaAvkpEALw_wcB">GlobalGiving</a>
+						</li>
+						<li><a href="https://www.actionagainsthunger.org/story/fighting-covid-19-around-world?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FU-sojAYVrvB40WJj458NbFiUAb8o3j8ETu3yjLRxTizZNtJGDP04caAiD9EALw_wcB"
+								.org />Actions Against Hunger</a></li>
+						<li><a href="https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=7779">Charity
+								Navigator</a></li>
 					</ul>
 				</section>
 				<section class="4u 6u$(medium) 12u$(small)">
 					<h3>COVID-19 Resources</h3>
 					<li>
 						<a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC COVID-19 Site</a><br>
-						
+
 					</li>
 					<li>
-						<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO COVID-19 Site</a><br>
-						
+						<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO COVID-19
+							Site</a><br>
+
 					</li>
 
 
@@ -212,8 +301,7 @@
 						</li>
 						<li>
 							<h3>LinkedIn: </h3>
-							<a
-								href="https://www.linkedin.com/in/justin-chan-b81290196/">linkedin.com/in/justin-chan</a>
+							<a href="https://www.linkedin.com/in/justin-chan-b81290196/">linkedin.com/in/justin-chan</a>
 						</li>
 					</ul>
 				</section>
