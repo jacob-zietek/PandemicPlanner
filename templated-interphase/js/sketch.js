@@ -2,8 +2,8 @@ var len1, len2;
 var scaleInchToPixel;
 var simStartX, simStartY;
 
-len1 = 30; // input dimension 1 in in
-len2 = 20; // input dimension 2 in in
+len1 = 20; // input dimension 1 in in
+len2 = 40; // input dimension 2 in in
 
 simStartX = 0;
 simStartY = 0;
@@ -22,11 +22,13 @@ function setup() {
 
     if (len1 < len2) {
         scaleInchToPixel = windowWidth / len2;
-        createCanvas(windowWidth, len1 * scaleInchToPixel);
+        var canvas = createCanvas(windowWidth, len1 * scaleInchToPixel);
     } else {
         scaleInchToPixel = windowWidth / len1;
-        createCanvas(windowWidth, len2 * scaleInchToPixel);
+        var canvas = createCanvas(windowWidth, len2 * scaleInchToPixel);
     }
+
+    canvas.parent('drawingCanvas');
 
 }
 
