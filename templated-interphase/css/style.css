@@ -957,7 +957,9 @@
 /* Banner */
 
 	#banner {
-		background: url("images/overlay.png"), url("../images/banner.jpg");
+		
+		background-color: #ffffff; 
+		/*: url("images/overlay.png"), url("../images/banner.jpg");*/
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -967,14 +969,15 @@
 	}
 
 		#banner h2 {
-			color: #ffffff;
+			color: #000000;
 			font-size: 3em;
 			line-height: 1em;
-			margin: 0 0 0.5em 0;
+			margin: 0 0 0.1em 0;
 			padding: 0;
 		}
 
 		#banner p {
+			color: #000000;
 			font-size: 1.5em;
 			margin: 1.5em 0 0 0;
 		}
@@ -984,8 +987,8 @@
 		}
 
 		#banner .button {
-			background-color: transparent;
-			border: 1px solid #ffffff;
+			background-color: #c26565;
+			border-radius: 15px;
 			font-weight: 300;
 		}
 
@@ -996,25 +999,30 @@
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0em 4em;
+		padding: 2em 0em 4em;
 	}
 
 		.wrapper.style1 {
-			background-color: #3ba666;
-			-moz-background-image: linear-gradient(60deg, #4dac71 50%, #3ba666 50%);
-			-webkit-background-image: linear-gradient(60deg, #4dac71 50%, #3ba666 50%);
-			-o-background-image: linear-gradient(60deg, #4dac71 50%, #3ba666 50%);
-			-ms-background-image: linear-gradient(60deg, #4dac71 50%, #3ba666 50%);
-			background-image: linear-gradient(60deg, #4dac71 50%, #3ba666 50%);
+			background-color: #ffffff;
+			-moz-background-image: linear-gradient(60deg, #ffffff 50%, #78CBEF 50%);
+			-webkit-background-image: linear-gradient(60deg, #ffffff 50%, #78CBEF 50%);
+			-o-background-image: linear-gradient(60deg, #ffffff 50%, #78CBEF 50%);
+			-ms-background-image: linear-gradient(60deg, #ffffff 50%, #78CBEF 50%);
+			background-image: linear-gradient(60deg, #ffffff 50%, #78CBEF 50%);
 			color: #ffffff;
 		}
 
 			.wrapper.style1 header {
-				margin-bottom: 4em;
+				margin-bottom: 1em;
 			}
 
 			.wrapper.style1 h2 {
-				color: #ffffff;
+				color: #000000;
+				font-size: 3em;
+			}
+			.wrapper.style1 p {
+				color: #000000;
+				font-size: 1.1em;
 			}
 
 			.wrapper.style1 .icon.big {
