@@ -16,7 +16,7 @@ function genSocialDistance(){
     setup();
     document.getElementById('drawingCanvas').style.display='block'; // This shows the HTML5 canvas
 
-    var maxPeople = Math.ceil(len1ForSim/6) * Math.ceil(len2ForSim/6);
+    var maxPeople = Math.ceil(len1ForSim/6) * Math.ceil(len2ForSim/6); // Max amt of people given space
     console.log("Max people: " + maxPeople);
 
     //getUserLocation();    
