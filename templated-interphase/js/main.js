@@ -8,6 +8,7 @@
 var numPeople;
 var coords;
 var maxPeople;
+var peopleAttending
 
 function genSocialDistance(){
     len1ForSim = parseInt(document.getElementById("length").value, 10);
@@ -20,7 +21,17 @@ function genSocialDistance(){
     maxPeople = Math.ceil(len1ForSim/6) * Math.ceil(len2ForSim/6); // Max amt of people given space
     console.log("Max people: " + maxPeople);
 
+    var peopleLimitMessage = "Please keep in mind that the max amount of participants for this event is: " + maxPeople;
+    if(maxPeople < numPeople)
+        peopleLimitMessage += ". This is less than the number of people you entered. Consider reducing the amount of attendees.";
+    else 
+        peopleLimitMessage += ".";
+
+    document.getElementById("peopleLimit").innerHTML = peopleLimitMessage;
+
     updateCostTable();
+    document.getElementById('two').style.display = 'block';
+
 }
 
 function updateCostTable(){
@@ -47,6 +58,7 @@ function updateCostTable(){
     document.getElementById("handSanitizerDesc").innerHTML = sanitizerBottles + "x Hand Sanitizer Refill";
     document.getElementById("deepCleanDesc").innerHTML = "Deep Cleaning Cost for roughly " + squareFeet*1000 + " square feet";
 
+    document.getElementById("totalCost").innerHTML = "$" + (costDeepClean + costSanitizer + 320);
 }
 
 function getUserLocation(){
