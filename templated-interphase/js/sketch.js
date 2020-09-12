@@ -20,29 +20,36 @@ function setup() {
     // !!! May have issues on mobile, although we don't care that much
     // Sets scale constant so code is ez pz
 
+    var bound = (windowWidth*.25)
+
     if (len1ForSim < len2ForSim) {
-        scaleInchToPixel = windowWidth / len2ForSim;
-        var canvas = createCanvas(windowWidth, len1ForSim * scaleInchToPixel);
+        scaleInchToPixel = (windowWidth-bound) / len2ForSim;
+        var canvas = createCanvas(windowWidth-bound, len1ForSim * scaleInchToPixel);
     } else {
-        scaleInchToPixel = windowWidth / len1ForSim;
-        var canvas = createCanvas(windowWidth, len2ForSim * scaleInchToPixel);
+        scaleInchToPixel = (windowWidth-bound) / len1ForSim;
+        var canvas = createCanvas(windowWidth-bound, len2ForSim * scaleInchToPixel);
     }
 
     canvas.parent('drawingCanvas');
 
+    updateCanvas();
+    updateCanvas();
+    updateCanvas();
+    updateCanvas();
+    updateCanvas();
+    updateCanvas();
+
 }
 
-function draw() {
+function updateCanvas() {
     background(255); // Sets background color
 
+    rect(0, 0, width, height);
 
-    rect(0, 0, windowWidth, height);
-
-    
     // Maps out how far everyone needs to be to abide by social 
     // distancing standards
 
-    for (var i = -abs(simStartX); i < windowWidth; i = i + (6 * scaleInchToPixel)) {
+    for (var i = -abs(simStartX); i < width; i = i + (6 * scaleInchToPixel)) {
         for (var j = -abs(simStartY); j < height; j = j + (6 * scaleInchToPixel)) {
             strokeWeight(5);
             point(i, j);
@@ -51,7 +58,7 @@ function draw() {
 
     // Text that displays the side lengths of the room
 
-    text(round(windowWidth * (1 / scaleInchToPixel)) + "ft", windowWidth / 2, height - 20);
+    text(round(width * (1 / scaleInchToPixel)) + "ft", width / 2, height - 20);
     text(round(height * (1 / scaleInchToPixel)) + "ft", 20, height / 2);
 
     
@@ -65,5 +72,5 @@ function mouseDragged() {
     simStartY += (mouseY - mouseYp);
     mouseXp = mouseX;
     mouseYp = mouseY;
-
+    updateCanvas();
 }
