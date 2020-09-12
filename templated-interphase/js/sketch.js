@@ -1,4 +1,4 @@
-var len1ForSim, len2ForSim;
+var len1ForSim, len2;
 var scaleInchToPixel;
 var simStartX, simStartY;
 
@@ -33,7 +33,7 @@ function setup() {
 }
 
 function draw() {
-    background(230); // Sets background color
+    background(255); // Sets background color
 
     // Maps out how far everyone needs to be to abide by social 
     // distancing standards

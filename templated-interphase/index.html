@@ -13,6 +13,7 @@
 <script>
 	window.onload = function () {
 		document.getElementById('drawingCanvas').style.display = 'none';
+		document.getElementById('two').style.display = 'none';
 	}
 </script>
 
@@ -60,7 +61,7 @@
 	<section id="banner">
 		<h2 style="font-family: Arial, Gadget, sans-serif;"> Pandemic Planner </h2>
 		<p style="font-family: Arial, Gadget, sans-serif;font-size:16px;font-style:italic;">
-			Event planner's bestfriend during COVID-19
+			An event planner's bestfriend during COVID-19
 		</p>
 		<ul class="actions">
 			<a href="tel: 911" class="button big">Call 911 For Medical Emergencies</a>
@@ -81,9 +82,9 @@
 			<header>
 				<h2>Social Distance Generator</h2>
 				<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-				<p style="font-family: Open Sans; 20px">Enter in the number of people and the dimensions of the venue to
-					see if this event is COVID-19
-					friendly :)</p>
+				<p style="font-family: Open Sans; 20px">Enter in the number of people attending this event and the dimensions of the venue to
+					see how it will work under COVID-19
+					 :)</p>
 			</header>
 
 
@@ -97,8 +98,8 @@
 					(feet):</label>
 				<input type="number" id="length" name="length" min="0">
 				<input type="number" id="width" name="width" min="0"> <br><br>
-				<label for="location" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Venue
-					Location:</label>
+				<label for="location" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>
+					State where venue is located:</label>
 				<input type="text" id="location" name="location">
 
 			</form>
@@ -131,15 +132,19 @@
 	</section>
 
 	<!-- Canvas -->
-	<div id="drawingCanvas">
-
+	<div id="drawingCanvas" class="wrapper style2 align-center">
+		<header>
+			<h2>Proper social distancing for your event</h2>
+			<p>This is a simulation of where every person would have to sit in your venue, assuming the theoretical max shows up.</p>
+			<p id="peopleLimit"></p>
+		</header>
 	</div>
 	<!-- Two -->
 	<section id="two" class="wrapper style2 align-center">
 		<div class="container">
 			<header>
 				<h2>Cost Breakdown</h2>
-				<p>This is a bare minimum cost of running an event with COVID-19 in mind</p>
+				<p>This is the additional bare minimum cost of running your event with COVID-19 in mind</p>
 			</header>
 			<!DOCTYPE html>
 			<html>
@@ -181,28 +186,28 @@
 					<tr>
 
 						<td><a href="https://www.amazon.com/Luxton-Automatic-Hand-Sanitizer-Dispenser/dp/B088LWDTYB/ref=sr_1_2_sspa?crid=ZWOKRTD5PYJA&dchild=1&keywords=purell+dispenser&qid=1599929125&sprefix=purell+dispe%2Caps%2C323&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUjRMV1JBM0VEWDA3JmVuY3J5cHRlZElkPUEwMzAxMzExMTU0TUZTNjhMSU44MSZlbmNyeXB0ZWRBZElkPUEwNTM5MTIxRThORFdaSk4xUUpPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
-								style="color:#000000;">Hand Sanitizer Dispenser</a><br></td>
+								style="color:#000000;" id="handSanitizerStationDesc">2x Hand Sanitizer Dispenser</a><br></td>
 						<td>
-							<p id="handSanitizer">$320</p>
+							<p id="handSanitizerStationCost">$320</p>
 						</td>
 					</tr>
 					<tr>
 						<td><a href="https://thedentalmarket.net/featured-items/purell-advanced-hand-sanitizer-gel-1000-ml-refill/?gclid=CjwKCAjw4_H6BRALEiwAvgfzq3BtepkSbJHOw1uu9d4FS-P9A-19NoMTeX2XsGJh5Jjqm-KYq4F1CRoCS9kQAvD_BwE"
-								style="color:#000000;">Hand Sanitizer Refill</a><br></td>
+								style="color:#000000;" id="handSanitizerDesc">Hand Sanitizer Refill</a><br></td>
 
 						<td>
-							<p id="handSanitizer">$20</p>
+							<p id="handSanitizerCost">$20</p>
 						</td>
 					</tr>
 					<tr>
 						<td><a href="https://www.amazon.com/Luxton-Automatic-Hand-Sanitizer-Dispenser/dp/B088LWDTYB/ref=sr_1_2_sspa?crid=ZWOKRTD5PYJA&dchild=1&keywords=purell+dispenser&qid=1599929125&sprefix=purell+dispe%2Caps%2C323&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUjRMV1JBM0VEWDA3JmVuY3J5cHRlZElkPUEwMzAxMzExMTU0TUZTNjhMSU44MSZlbmNyeXB0ZWRBZElkPUEwNTM5MTIxRThORFdaSk4xUUpPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
-								style="color:#000000;">Deep Cleaning Cost</a><br></td>
+								style="color:#000000;" id="deepCleanDesc">Deep Cleaning Cost</a><br></td>
 						<td>
-							<p id="DeepClean">$20</p>
+							<p id="deepCleanCost">$20</p>
 						</td>
 					</tr>
 					<tr>
-						<td style = "font-size: 25px;">Total Cost:         <div style = "display: inline"; id="DeepClean">$20</div></td>
+						<td style = "font-size: 25px;">Total Cost:         <div style = "display: inline"; id="totalCost">$20</div></td>
 						
 							
 						
@@ -241,8 +246,7 @@
 						<li><a
 								href="https://www.globalgiving.org/projects/coronavirus-relief-fund/?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FW8svgErfU9x2xUueS-jm-ZduOn0l_xeTeZ2SgqGeyooYmbZro-99kaAvkpEALw_wcB">GlobalGiving</a>
 						</li>
-						<li><a href="https://www.actionagainsthunger.org/story/fighting-covid-19-around-world?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FU-sojAYVrvB40WJj458NbFiUAb8o3j8ETu3yjLRxTizZNtJGDP04caAiD9EALw_wcB"
-								.org />Actions Against Hunger</a></li>
+						<li><a href="https://www.actionagainsthunger.org/story/fighting-covid-19-around-world?gclid=Cj0KCQjwwOz6BRCgARIsAKEG4FU-sojAYVrvB40WJj458NbFiUAb8o3j8ETu3yjLRxTizZNtJGDP04caAiD9EALw_wcB">Actions Against Hunger</a></li>
 						<li><a href="https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=7779">Charity
 								Navigator</a></li>
 					</ul>
