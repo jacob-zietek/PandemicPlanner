@@ -1,4 +1,4 @@
-var len1ForSim, len2ForSim;
+var len1ForSim, len2;
 var scaleInchToPixel;
 var simStartX, simStartY;
 

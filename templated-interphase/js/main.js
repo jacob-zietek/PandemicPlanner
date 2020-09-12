@@ -7,19 +7,46 @@
 
 var numPeople;
 var coords;
+var maxPeople;
 
 function genSocialDistance(){
-    len1ForSim = document.getElementById("length").value;
-    len2ForSim = document.getElementById("width").value;
-    numPeople = document.getElementById("people").value;
+    len1ForSim = parseInt(document.getElementById("length").value, 10);
+    len2ForSim = parseInt(document.getElementById("width").value, 10);
+    numPeople = parseInt(document.getElementById("people").value, 10);
 
     setup();
     document.getElementById('drawingCanvas').style.display='block'; // This shows the HTML5 canvas
 
-    var maxPeople = Math.ceil(len1ForSim/6) * Math.ceil(len2ForSim/6); // Max amt of people given space
+    maxPeople = Math.ceil(len1ForSim/6) * Math.ceil(len2ForSim/6); // Max amt of people given space
     console.log("Max people: " + maxPeople);
 
-    //getUserLocation();    
+    updateCostTable();
+}
+
+function updateCostTable(){
+    /* All revalant elements of table 
+    document.getElementById("handSanitizerStationCost").innerHTML = "";
+    document.getElementById("handSanitizerCost").innerHTML = "";
+    document.getElementById("deepCleanCost").innerHTML = "";
+    document.getElementById("handSanitizerStationDesc").innerHTML = "";
+    document.getElementById("handSanitizerDesc").innerHTML = "";
+    document.getElementById("deepCleanDesc").innerHTML = "";
+    */
+
+    var sanitizerBottles = Math.ceil(maxPeople / 48);
+    var costSanitizer = sanitizerBottles * 55; // Approx. cost of sanitizer in dollars
+    // Assumes 480 squirts per bottle, $55 per bottle, 10 squirts per person per day
+
+    var squareFeet = Math.ceil((len1ForSim*len2ForSim)/1000);
+    var costDeepClean = squareFeet * 80 + 40; // Approx. cost of deep cleaning for venue
+    // Assumes 80 dollars per 1000sq ft and $40 baseline
+
+    document.getElementById("handSanitizerCost").innerHTML = "$" + costSanitizer;
+    document.getElementById("deepCleanCost").innerHTML = "$" + costDeepClean;
+
+    document.getElementById("handSanitizerDesc").innerHTML = sanitizerBottles + "x Hand Sanitizer Refill";
+    document.getElementById("deepCleanDesc").innerHTML = "Deep Cleaning Cost for roughly " + squareFeet*1000 + " square feet";
+
 }
 
 function getUserLocation(){
