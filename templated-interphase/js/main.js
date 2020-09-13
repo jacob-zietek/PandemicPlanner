@@ -28,6 +28,7 @@ function genSocialDistance() {
 
     maxPeople = Math.ceil(len1ForSim / 6) * Math.ceil(len2ForSim / 6); // Max amt of people given space
     //console.log("Max people: " + maxPeople);
+    maxPeople = Math.ceil(len1ForSim / 6) * Math.ceil(len2ForSim / 6); // Max amt of people given space
 
     var peopleLimitMessage = "Please keep in mind that the max amount of participants for this event is: " + maxPeople;
     if (maxPeople < numPeople)
@@ -59,7 +60,7 @@ function updateStateData(input) {
     }
 
     var text = "";
-    text += "The cap on attendees in your state is: " + input.maxParticipants;
+    text += "The cap for attendees in your state is: " + input.maxParticipants;
     document.getElementById("stateInfo").innerHTML = text;
 
 }

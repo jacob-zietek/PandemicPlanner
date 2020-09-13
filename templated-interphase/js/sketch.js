@@ -32,7 +32,7 @@ function setup() {
 
     canvas.parent('drawingCanvas');
 
-    updateCanvas();
+    updateCanvas(); // A hackey way to get better line thickness :)
     updateCanvas();
     updateCanvas();
     updateCanvas();

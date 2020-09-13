@@ -9,6 +9,7 @@
 <script src="js/p5.min.js"></script>
 <script src="js/sketch.js"></script>
 <script src="js/main.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
 
 <script>
 	window.onload = function () {
@@ -61,7 +62,7 @@
 	<section id="banner">
 		<h2 style="font-family: Arial, Gadget, sans-serif;"> Pandemic Planner </h2>
 		<p style="font-family: Arial, Gadget, sans-serif;font-size:16px;font-style:italic;">
-			An event planner's bestfriend during COVID-19
+			An event planner's best friend during COVID-19
 		</p>
 		<ul class="actions">
 			<a href="tel: 911" class="button big">Call 911 For Medical Emergencies</a>
@@ -80,11 +81,11 @@
 	<section id="one" class="wrapper style1 align-left">
 		<div class="container">
 			<header>
-				<h2></h2>
+				<h2>Event Helper</h2>
 				<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-				<p style="font-family: Open Sans; 20px">Enter in the number of people attending this event and the dimensions of the venue to
+				<p style="font-family: Open Sans; 20px">Enter in the number of people attending your event and the dimensions of your venue to
 					see how it will work under COVID-19
-					 :)</p>
+					</p>
 			</header>
 
 
@@ -94,12 +95,12 @@
 				</label>
 				<input type="number" id="people" name="people" min="0"><br><br>
 
-				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Length x Width
+				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Length x Width of room
 					(feet):</label>
 				<input type="number" id="length" name="length" min="0">
 				<input type="number" id="width" name="width" min="0"> <br><br>
 				<label for="location" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>
-					State where venue is located:</label>
+					State abbreviation of where venue is located (NY, ID, PA):</label>
 				<input type="text" id="location" name="location">
 
 			</form>
@@ -107,6 +108,7 @@
 			<input type="submit" value="Generate" style="background-color: #c26565; 
 			border-radius: 10px;
 			" onclick="genSocialDistance();">
+						<p><br></p>
 			<!-- generates something button wrong color-->
 
 			<!--
@@ -134,17 +136,18 @@
 	<!-- Canvas -->
 	<div id="drawingCanvas" class="wrapper style2 align-center">
 		<header>
-			<h2>Proper social distancing for your event</h2>
-			<p>This is a simulation of where every person would have to sit in your venue, assuming the theoretical max shows up.</p>
-			<p id="peopleLimit"></p>
-		</header>
+			<h3 id="peopleLimit" style="font-family: Arial, Gadget, sans-serif;font-size:30px"></h3>
+			<h3 id="stateInfo" style="font-family: Arial, Gadget, sans-serif;font-size:20px"></h3>
+			<h2></br></br>Proper social distancing for your event</h2>
+			<p>This is a visualization of possible social distancing spacing for your venue, assuming the theoretical max
+				shows up</br>Click and drag inside of the box to move the people (dots) around</p>
 	</div>
 	<!-- Two -->
 	<section id="two" class="wrapper style2 align-center">
 		<div class="container">
 			<header>
 				<h2>Cost Breakdown</h2>
-				<p>This is the additional bare minimum cost of running your event with COVID-19 in mind</p>
+				<p>There are some additional costs to keep in mind</p>
 			</header>
 			<!DOCTYPE html>
 			<html>
@@ -221,17 +224,15 @@
 
 			
 
-				<!--
-
-				cost breakdown section
-			-->
-				<footer>
-					<ul class="actions">
-						<li>
-							<a href="#" class="button alt big">Learn More</a>
-						</li>
-					</ul>
-				</footer>
+				<!--cost breakdown section-->
+			<footer>
+				<ul class="actions">
+					<h2>Give this QR code to your attendees before the event!</h2>
+					<li>
+						<img src="qrcode.png"></img>
+					</li>
+				</ul>
+			</footer>
 		</div>
 	</section>
 
@@ -324,7 +325,6 @@
 			<ul class="copyright">
 				<li>&copy; All rights reserved.</li>
 				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-				<li>Images: <a href="http://unsplash.com">Unsplash</a> and Stranger Things Season 3</li>
 			</ul>
 		</div>
 	</footer>
