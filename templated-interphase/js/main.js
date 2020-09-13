@@ -18,6 +18,10 @@ function genSocialDistance() {
     numPeople = parseInt(document.getElementById("people").value, 10);
     locState = document.getElementById("location").value;
 
+    if(isNaN(len2ForSim) || isNaN(len1ForSim) || isNaN(numPeople)){
+        return;
+    }
+
 
     setup();
     document.getElementById('drawingCanvas').style.display = 'block'; // This shows the HTML5 canvas
