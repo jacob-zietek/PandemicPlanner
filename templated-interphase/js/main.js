@@ -34,7 +34,7 @@ function genSocialDistance() {
     if (maxPeople < numPeople)
         peopleLimitMessage += "</br>You must reduce the amount of attendees.";
     else
-        peopleLimitMessage += ".";
+        peopleLimitMessage += "";
 
     document.getElementById("peopleLimit").innerHTML = peopleLimitMessage;
 
@@ -60,7 +60,7 @@ function updateStateData(input) {
     }
 
     var text = "";
-    text += "The cap for attendees in your state is: " + input.maxParticipants;
+    text += "The cap for attendees during indoor events in your state is: " + input.maxParticipants;
     document.getElementById("stateInfo").innerHTML = text;
 
 }
