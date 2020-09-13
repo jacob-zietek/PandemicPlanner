@@ -1,4 +1,4 @@
-## PandemicPlanner
+# PandemicPlanner
 
 ## Hackathon Submission for PennApps 2020
 
