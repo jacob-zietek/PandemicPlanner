@@ -31,7 +31,7 @@ function genSocialDistance() {
 
     var peopleLimitMessage = "Please keep in mind that the max amount of participants for this event is: " + maxPeople;
     if (maxPeople < numPeople)
-        peopleLimitMessage += ". This is less than the number of people you entered. Consider reducing the amount of attendees.";
+        peopleLimitMessage += ".</br>This is less than the number of people you entered.</br>Consider reducing the amount of attendees.";
     else
         peopleLimitMessage += ".";
 
