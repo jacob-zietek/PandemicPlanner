@@ -31,7 +31,7 @@ function genSocialDistance() {
 
     var peopleLimitMessage = "Please keep in mind that the max amount of participants for this event is: " + maxPeople;
     if (maxPeople < numPeople)
-        peopleLimitMessage += ".</br>This is less than the number of people you entered.</br>Consider reducing the amount of attendees.";
+        peopleLimitMessage += "</br>You must reduce the amount of attendees.";
     else
         peopleLimitMessage += ".";
 
@@ -59,7 +59,7 @@ function updateStateData(input) {
     }
 
     var text = "";
-    text += "In the state where the event will happen, the cap on participants is: " + input.maxParticipants;
+    text += "The cap on attendees in your state is: " + input.maxParticipants;
     document.getElementById("stateInfo").innerHTML = text;
 
 }

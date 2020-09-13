@@ -20,7 +20,7 @@ function setup() {
     // !!! May have issues on mobile, although we don't care that much
     // Sets scale constant so code is ez pz
 
-    var bound = (windowWidth*.25)
+    var bound = (windowWidth*.50)
 
     if (len1ForSim < len2ForSim) {
         scaleInchToPixel = (windowWidth-bound) / len2ForSim;

@@ -82,12 +82,11 @@
 	<section id="one" class="wrapper style1 align-left">
 		<div class="container">
 			<header>
-				<h2>Social Distance Generator</h2>
+				<h2>Event Helper</h2>
 				<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 				<p style="font-family: Open Sans; 20px">Enter in the number of people attending this event and the
 					dimensions of the venue to
-					see how it will work under COVID-19
-					:)</p>
+					see how it will work under COVID-19</p>
 			</header>
 
 
@@ -97,12 +96,12 @@
 				</label>
 				<input type="number" id="people" name="people" min="0"><br><br>
 
-				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Length x Width
+				<label for="lname" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>Length x Width of room
 					(feet):</label>
 				<input type="number" id="length" name="length" min="0">
 				<input type="number" id="width" name="width" min="0"> <br><br>
 				<label for="location" style="font-family: Arial, Gadget, sans-serif;font-size:20px" ;>
-					State where venue is located:</label>
+					State abbreviation of where venue is located (NY, ID, PA):</label>
 				<input type="text" id="location" name="location">
 
 			</form>
@@ -111,7 +110,7 @@
 			border-radius: 10px;
 			" onclick="genSocialDistance();">
 			<p><br></p>
-			
+
 			<!-- generates something button wrong color-->
 
 			<!--
@@ -136,16 +135,16 @@
 		</div>
 	</section>
 
-	
+
 
 	<!-- Canvas -->
 	<div id="drawingCanvas" class="wrapper style2 align-center" style="text-align:center;">
 		<header>
 			<h3 id="peopleLimit" style="font-family: Arial, Gadget, sans-serif;font-size:30px"></h3>
-			<h3 id="stateInfo" style="font-family: Arial, Gadget, sans-serif;font-size:30px"></h3>
-			<h2>Proper social distancing for your event</h2>
-			<p>This is a simulation of where every person would have to sit in your venue, assuming the theoretical max
-				shows up.</p>
+			<h3 id="stateInfo" style="font-family: Arial, Gadget, sans-serif;font-size:20px"></h3>
+			<h2></br></br>Proper social distancing for your event</h2>
+			<p>This is a visualization of possible social distancing spacing for your venue, assuming the theoretical max
+				shows up</br>Click and drag inside of the box to move the people around</p>
 		</header>
 	</div>
 	<!-- Two -->
@@ -153,7 +152,7 @@
 		<div class="container">
 			<header>
 				<h2>Cost Breakdown</h2>
-				<p>This is the additional bare minimum cost of running your event with COVID-19 in mind</p>
+				<p>There are some additional costs to keep in mind</p>
 			</header>
 			<!DOCTYPE html>
 			<html>
@@ -215,7 +214,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="font-size: 25px;">Total Cost: <div style="display: inline" ; id="totalCost">$20</div>
+						<td style="font-size: 25px;">Total Additional Cost: <div style="display: inline" ; id="totalCost">$20</div>
 						</td>
 
 
