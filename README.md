@@ -2,6 +2,10 @@
 
 ## Hackathon Submission for PennApps 2020
 
+https://pandemicplanner.web.app/
+
+https://devpost.com/software/pandemic-planner?ref_content=user-portfolio&ref_feature=in_progress
+
 ## Inspiration
 Pandemic Planner is inspired by our needs as college students with the current pandemic affecting our daily lives. With all the necessary precautions that need to be taken with COVID-19, it can be difficult sometimes to see whether physical events can be feasible. As members of various organizations here on campus, we found ourselves struggling with event planning often missing social distancing guidelines and rules set by the state. Pandemic Planner is here to streamline that process. 
 
